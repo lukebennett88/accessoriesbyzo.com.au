@@ -5,6 +5,7 @@ module.exports = {
     author: `@AccessoriesbyZo`,
     facebook: `https://www.facebook.com/AccessoriesbyZo`,
     // instagram: `https://www.instagram.com/AccessoriesbyZo`,
+    siteUrl: `https:www.accessoriesbyzo.com.au`,
   },
   plugins: [
     `gatsby-plugin-netlify`,
