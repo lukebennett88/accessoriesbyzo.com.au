@@ -18,7 +18,7 @@ const Hero = () => {
   const { fluid } = data.file.childImageSharp;
   console.log(fluid);
   return (
-    <article className="flex flex-wrap-reverse text-2xl">
+    <article className="flex flex-wrap-reverse mt-12 text-2xl">
       <div className="w-full md:w-2/3">
         <p>Hello, my name is Zoe. I run this business.</p>
         <p>
