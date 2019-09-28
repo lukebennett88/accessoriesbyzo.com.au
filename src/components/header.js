@@ -1,42 +1,39 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { FaFacebookSquare } from 'react-icons/fa';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = ({ siteTitle }) => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          facebook
+        }
+      }
+    }
+  `);
+  const { facebook } = data.site.siteMetadata;
+  return (
+    <header className="sticky top-0">
+      <div className="bg-white flex items-center justify-between max-w-3xl mx-auto p-4 w-full">
+        <h1 className="font-display text-3xl">
+          <Link to="/">{siteTitle}</Link>
+        </h1>
+        <a href={facebook}>
+          <FaFacebookSquare className="fill-current" />
+        </a>
+      </div>
+    </header>
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

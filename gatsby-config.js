@@ -1,11 +1,38 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Accessories by Zó`,
+    description: `Hair accessories by Zó, 10 year old based in Australia trying to learn basic business practises.`,
+    author: `@AccessoriesbyZo`,
+    facebook: `https://www.facebook.com/AccessoriesbyZo`,
+    // instagram: `https://www.instagram.com/AccessoriesbyZo`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `accessories-by-zoe`,
+        short_name: `accessories-by-zoe`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: [`src/css/tailwind.css`],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,22 +40,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
