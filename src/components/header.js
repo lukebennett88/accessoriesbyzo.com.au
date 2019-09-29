@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => {
   const { facebook } = data.site.siteMetadata;
   return (
     <header className="bg-indigo-700 sticky text-indigo-100 top-0 z-10">
-      <div className="flex items-center justify-between max-w-3xl mx-auto px-12 py-4 w-full">
+      <div className="flex items-center justify-between max-w-6xl mx-auto px-12 py-4 w-full">
         <Link to="/" className="font-display text-3xl">
           {siteTitle}
         </Link>
