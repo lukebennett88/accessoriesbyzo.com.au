@@ -7,7 +7,7 @@ const Hero = () => {
     query HeroQuery {
       file(relativePath: { eq: "avatar.png" }) {
         childImageSharp {
-          fluid(maxWidth: 512, quality: 100) {
+          fluid(maxWidth: 320, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

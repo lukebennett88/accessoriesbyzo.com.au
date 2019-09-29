@@ -10,7 +10,7 @@ const NotFoundPage = () => {
     {
       file(relativePath: { eq: "404.png" }) {
         childImageSharp {
-          fluid(maxWidth: 512, quality: 100) {
+          fluid(maxWidth: 320, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
