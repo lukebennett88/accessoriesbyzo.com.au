@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => {
         <Link to="/" className="font-display text-3xl">
           {siteTitle}
         </Link>
-        <a href={facebook} className="text-2xl">
+        <a href={facebook} className="flex items-center ml-6 text-2xl">
           <FaFacebookSquare className="fill-current" />
         </a>
       </div>
