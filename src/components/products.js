@@ -32,14 +32,14 @@ const Products = () => {
     }
   `);
   return (
-    <>
-      <h1 className="font-bold mt-16 text-3xl">Products</h1>
+    <section>
+      <h1 className="font-bold mt-12 text-3xl">Products</h1>
       <div className="flex flex-wrap -mx-4">
         {data.allStripeSku.edges.map(product => (
           <Product key={product.node.id} product={product} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
