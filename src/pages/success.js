@@ -5,7 +5,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const Success = () => {
+const SuccessPage = () => {
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "success.png" }) {
@@ -44,4 +44,4 @@ const Success = () => {
   );
 };
 
-export default Success;
+export default SuccessPage;
