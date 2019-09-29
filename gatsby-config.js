@@ -1,3 +1,8 @@
+// Load the environment variables.
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Accessories by Zó`,
@@ -6,6 +11,8 @@ module.exports = {
     facebook: `https://www.facebook.com/AccessoriesbyZo`,
     // instagram: `https://www.instagram.com/AccessoriesbyZo`,
     siteUrl: `https:www.accessoriesbyzo.com.au`,
+    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+    STRIPE_PUBLISHABLE_KEY: process.env.STRIPE_PUBLISHABLE_KEY,
   },
   plugins: [
     `gatsby-plugin-netlify`,
@@ -14,6 +21,7 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-stripe`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -39,6 +47,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: [`Product`, `Sku`],
+        secretKey: process.env.STRIPE_SECRET_KEY,
+        downloadFiles: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
