@@ -31,8 +31,12 @@ const Product = ({ product }) => {
         // a successful payment.
         // Instead use one of the strategies described in
         // https://stripe.com/docs/payments/checkout/fulfillment
-        successUrl: 'http://localhost:8000/success',
-        cancelUrl: 'http://localhost:8000/cancelled',
+        successUrl: process.env.production
+          ? 'https://www.accessoriesbyzo.com.au/success'
+          : 'http://localhost:8000/success',
+        cancelUrl: process.env.production
+          ? 'https://www.accessoriesbyzo.com.au'
+          : 'http://localhost:8000',
       })
       .then(function(result) {
         if (result.error) {
