@@ -53,17 +53,23 @@ const Product = ({ product }) => {
           <h2 className="font-bold text-lg truncate">
             {product.node.attributes.name}
           </h2>
-          <p className="mt-2">${(product.node.price / 100).toFixed(2)}</p>
-          <p>No shipping options. Local pickup from Wauchope only.</p>
-          <p>
-            <button
-              onClick={() => redirectToCheckout()}
-              type="button"
-              className="button mt-6"
-            >
-              Buy now
-            </button>
+          <p className="mt-2">
+            No shipping options. Local pickup from Wauchope only.
           </p>
+          <div className="flex items-center justify-between mt-6">
+            <p className="font-bold text-3xl">
+              ${(product.node.price / 100).toFixed(2)}ea
+            </p>
+            <p>
+              <button
+                onClick={() => redirectToCheckout()}
+                type="button"
+                className="button"
+              >
+                Buy now
+              </button>
+            </p>
+          </div>
         </div>
       </div>
     </article>
