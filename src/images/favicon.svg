@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 24 24">
-  <linearGradient id="a" x2="1" gradientTransform="matrix(20 20 -22.069 22.069 4 4)" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#3946d5"/>
-    <stop offset="1" stop-color="#00ffe6"/>
-  </linearGradient>
-  <path fill="url(#a)" d="M24 6c0-3.311-2.689-6-6-6H6C2.689 0 0 2.689 0 6v12c0 3.311 2.689 6 6 6h12c3.311 0 6-2.689 6-6z"/>
-  <path fill="#fff" fill-rule="nonzero" d="M5.943 20a.575.575 0 0 1-.423-.171.578.578 0 0 1-.171-.423v-2.332c0-.198.03-.35.091-.457s.145-.228.251-.366l7.269-8.708H6.149a.545.545 0 0 1-.4-.172.545.545 0 0 1-.172-.4V4.594c0-.167.053-.308.16-.423A.54.54 0 0 1 6.149 4h11.634c.167 0 .308.057.423.171a.578.578 0 0 1 .171.423v2.309c0 .289-.099.548-.297.777l-7.017 8.731h6.994c.168 0 .309.058.423.172s.171.255.171.423v2.423c0 .167-.057.304-.171.411s-.255.16-.423.16z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 24 24"><path fill="url(#_Linear1)" d="M24 6c0-3.311-2.689-6-6-6H6C2.689 0 0 2.689 0 6v12c0 3.311 2.689 6 6 6h12c3.311 0 6-2.689 6-6V6z"/><path fill="#fff" fill-rule="nonzero" d="M6.7 19a.506.506 0 0 1-.37-.15.505.505 0 0 1-.149-.37v-2.04c0-.174.026-.307.079-.4.054-.094.127-.2.22-.32l6.36-7.62H6.881a.475.475 0 0 1-.35-.15.476.476 0 0 1-.151-.35V5.52a.52.52 0 0 1 .14-.37.474.474 0 0 1 .361-.15H17.06c.146 0 .27.05.37.15a.502.502 0 0 1 .15.37v2.02c0 .253-.087.48-.26.68l-6.14 7.64h6.12c.147 0 .27.05.37.15.1.1.15.223.15.37v2.12c0 .146-.05.266-.15.36a.518.518 0 0 1-.37.14H6.7z"/><defs><linearGradient id="_Linear1" x2="1" gradientTransform="matrix(20 20 -20 20 4 4)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3946d5"/><stop offset="1" stop-color="#00ffe6"/></linearGradient></defs></svg>
