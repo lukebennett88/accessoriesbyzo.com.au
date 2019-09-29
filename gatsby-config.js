@@ -13,6 +13,8 @@ module.exports = {
     siteUrl: `https:www.accessoriesbyzo.com.au`,
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
     STRIPE_PUBLISHABLE_KEY: process.env.STRIPE_PUBLISHABLE_KEY,
+    SUCCESS_URL: process.env.SUCCESS_URL,
+    CANCEL_URL: process.env.CANCEL_URL,
   },
   plugins: [
     `gatsby-plugin-netlify`,

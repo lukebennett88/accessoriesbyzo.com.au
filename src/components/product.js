@@ -9,6 +9,8 @@ const Product = ({ product }) => {
       site {
         siteMetadata {
           STRIPE_PUBLISHABLE_KEY
+          SUCCESS_URL
+          CANCEL_URL
         }
       }
     }
@@ -31,12 +33,8 @@ const Product = ({ product }) => {
         // a successful payment.
         // Instead use one of the strategies described in
         // https://stripe.com/docs/payments/checkout/fulfillment
-        successUrl: process.env.production
-          ? 'https://www.accessoriesbyzo.com.au/success'
-          : 'http://localhost:8000/success',
-        cancelUrl: process.env.production
-          ? 'https://www.accessoriesbyzo.com.au'
-          : 'http://localhost:8000',
+        successUrl: data.site.siteMetadata.SUCCESS_URL,
+        cancelUrl: data.site.siteMetadata.CANCEL_URL,
       })
       .then(function(result) {
         if (result.error) {
