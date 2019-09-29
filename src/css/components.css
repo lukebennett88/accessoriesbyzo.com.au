@@ -8,3 +8,11 @@ body {
   @apply bg-fixed;
   /* background by SVGBackgrounds.com */
 }
+
+.button {
+  @apply bg-indigo-700 font-medium inline-block px-6 py-2 rounded shadow text-xs text-white tracking-wider uppercase;
+}
+
+.button:hover {
+  @apply bg-indigo-600 shadow-lg;
+}

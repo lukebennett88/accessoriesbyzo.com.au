@@ -59,7 +59,7 @@ const Product = ({ product }) => {
             <button
               onClick={() => redirectToCheckout()}
               type="button"
-              className="bg-indigo-700 font-medium inline-block px-6 py-2 rounded shadow text-xs text-white tracking-wider uppercase hover:bg-indigo-600 hover:shadow-lg"
+              className="button mt-6"
             >
               Buy now
             </button>
