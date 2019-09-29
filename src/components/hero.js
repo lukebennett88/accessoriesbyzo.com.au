@@ -17,7 +17,7 @@ const Hero = () => {
 
   const { fluid } = data.file.childImageSharp;
   return (
-    <article className="bg-white flex flex-wrap items-center mt-12 px-6 py-8 rounded shadow text-2xl hover:shadow-lg">
+    <article className="bg-white flex flex-wrap items-center mt-12 px-6 py-8 rounded-lg shadow text-2xl hover:shadow-lg">
       <div className="max-w-xs mx-auto pb-4 md:p-4 w-full md:w-1/3">
         <Image fluid={fluid} alt="Zoe" />
       </div>

@@ -47,7 +47,7 @@ const Product = ({ product }) => {
   };
   return (
     <article className="flex mt-4 px-4 w-full sm:w-1/2 md:w-1/3">
-      <div className="bg-white overflow-hidden rounded shadow w-full hover:shadow-xl">
+      <div className="bg-white overflow-hidden rounded-lg shadow w-full hover:shadow-xl">
         <Image fluid={product.node.localFiles[0].childImageSharp.fluid} />
         <div className="px-6 py-4">
           <h2 className="font-bold text-lg truncate">

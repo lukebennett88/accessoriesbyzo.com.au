@@ -21,7 +21,7 @@ const NotFoundPage = () => {
   return (
     <Layout>
       <SEO title="404: Not found" />
-      <article className="bg-white flex flex-wrap items-center mt-12 px-6 py-12 rounded text-2xl">
+      <article className="bg-white flex flex-wrap items-center mt-12 px-6 py-8 rounded-lg shadow text-2xl hover:shadow-lg">
         <div className="max-w-xs mx-auto pb-4 md:p-4 w-full md:w-1/3">
           <Image fluid={fluid} alt="Zoe" />
         </div>
