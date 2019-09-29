@@ -17,9 +17,9 @@ const Header = ({ siteTitle }) => {
   return (
     <header className="bg-indigo-700 sticky text-indigo-100 top-0 z-10">
       <div className="flex items-center justify-between max-w-3xl mx-auto p-4 w-full">
-        <h1 className="font-display text-3xl">
-          <Link to="/">{siteTitle}</Link>
-        </h1>
+        <Link to="/" className="font-display text-3xl">
+          {siteTitle}
+        </Link>
         <a href={facebook} className="text-2xl">
           <FaFacebookSquare className="fill-current" />
         </a>
