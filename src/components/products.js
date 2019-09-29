@@ -10,23 +10,21 @@ const Products = () => {
         filter: { active: { eq: true } }
         sort: { order: ASC, fields: price }
       ) {
-        edges {
-          node {
-            active
-            attributes {
-              name
-            }
-            currency
-            id
-            localFiles {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+        nodes {
+          active
+          attributes {
+            name
+          }
+          currency
+          id
+          localFiles {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
-            price
           }
+          price
         }
       }
     }
@@ -35,8 +33,8 @@ const Products = () => {
     <section>
       <h1 className="font-bold mt-12 text-3xl">Products</h1>
       <div className="flex flex-wrap -mx-4">
-        {data.allStripeSku.edges.map(product => (
-          <Product key={product.node.id} product={product} />
+        {data.allStripeSku.nodes.map(product => (
+          <Product key={product.id} product={product} />
         ))}
       </div>
     </section>
