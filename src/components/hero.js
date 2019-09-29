@@ -17,7 +17,7 @@ const Hero = () => {
 
   const { fluid } = data.file.childImageSharp;
   return (
-    <article className="bg-white flex flex-wrap-reverse mt-12 px-6 py-4 rounded shadow text-2xl hover:shadow-lg">
+    <article className="bg-white flex flex-wrap-reverse mt-12 px-6 py-8 rounded shadow text-2xl hover:shadow-lg">
       <div className="w-full md:w-2/3">
         <p>Hello, my name is Zoe. I run this business.</p>
         <p>
