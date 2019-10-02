@@ -1,4 +1,6 @@
 // Load the environment variables.
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -41,8 +43,8 @@ module.exports = {
         name: `accessories-by-zoe`,
         short_name: `accessories-by-zoe`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: defaultTheme.colors.indigo[600],
+        theme_color: defaultTheme.colors.indigo[600],
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
