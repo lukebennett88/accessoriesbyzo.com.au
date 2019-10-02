@@ -26,6 +26,16 @@ module.exports = {
     `gatsby-plugin-stripe`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-149349361-1`,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `accessories-by-zoe`,
